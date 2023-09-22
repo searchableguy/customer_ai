@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  unstructured-api:
+    image: quay.io/unstructured-io/unstructured-api:latest
+    command: "--port 8000 --host 0.0.0.0"
+    ports:
+      - 8000:8000
+  discord_bot:
+    build: .
+    env_file:
+      - .env.local
+    depends_on:
+      - unstructured-api

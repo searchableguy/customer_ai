@@ -1,0 +1,11 @@
+services:
+  # A Docker web service
+  - type: web
+    name: unstructured
+    runtime: image
+    healthCheckPath: /
+    image:
+      url: quay.io/unstructured-io/unstructured-api:latest
+
+envVarGroups:
+  - name: customer_ai

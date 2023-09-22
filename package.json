@@ -1,0 +1,33 @@
+{
+  "name": "moderator_gpt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "dotenv -e .env.local tsx watch src/index.ts",
+    "register": "dotenv -e .env.local tsx src/scripts/register",
+    "build": "tsc -p .",
+    "start": "node dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.24.0",
+    "discord.js": "^14.11.0",
+    "langchain": "^0.0.92",
+    "pino": "^8.14.1",
+    "redis": "^4.6.7",
+    "zod": "^3.21.4"
+  },
+  "devDependencies": {
+    "@types/node": "^18.16.17",
+    "dotenv": "^16.1.4",
+    "dotenv-cli": "^6.0.0",
+    "supabase": "^1.64.8",
+    "ts-node-dev": "^2.0.0",
+    "tsx": "^3.12.7",
+    "typescript": "^4.9.5"
+  }
+}
